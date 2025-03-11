@@ -45,7 +45,7 @@ class _MyTabBarState extends State<MyTabBar>
                   ),
                 ),
                 Tab(text: 'Call'),
-                Tab(text: 'Notification'),
+                Tab(text: 'hi'),
               ],
             ),
           ),
