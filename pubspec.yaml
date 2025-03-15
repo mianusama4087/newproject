@@ -38,6 +38,7 @@ dependencies:
   table_calendar: ^3.2.0
   flutter_balloon_slider: ^0.1.1
   switcher_button: ^0.0.4
+  email_otp: ^3.0.2
 
 
 

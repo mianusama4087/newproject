@@ -9,12 +9,12 @@ class Tab_Bar extends StatefulWidget {
 }
 
 class Tab_BarState extends State<Tab_Bar> with SingleTickerProviderStateMixin {
-  late TabController tabController;
+  late TabController _tabController;
 
   @override
   void initState() {
     super.initState();
-    var tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -37,7 +37,7 @@ class Tab_BarState extends State<Tab_Bar> with SingleTickerProviderStateMixin {
             Material(
               color: Colors.white,
               child: TabBar(
-                controller: tabController,
+                controller: _tabController,
                 tabs: const [
                   Tab(
                     child: SizedBox(
@@ -59,7 +59,7 @@ class Tab_BarState extends State<Tab_Bar> with SingleTickerProviderStateMixin {
             ),
             Expanded(
                 child: TabBarView(
-                    controller: tabController,
+                    controller: _tabController,
                     children: const [Text('u'), Text('m'), Text('y')]))
           ],
         ),
