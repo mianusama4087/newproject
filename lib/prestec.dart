@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 
 class Prestec extends StatelessWidget {
   const Prestec({super.key});
-
   @override
   Widget build(BuildContext context) {
-    final List<String> item = List.generate(8, (index) => 'index');
+    final List<String> items = List.generate(20, (index) => "index");
     return Scaffold(
       body: GridView.builder(
+          itemCount: items.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3, mainAxisExtent: 10.0, crossAxisSpacing: 10.0),
+              crossAxisCount: 5, mainAxisSpacing: 10.0, crossAxisSpacing: 20),
           itemBuilder: (context, index) {
             return Container(
               height: 200,
-              width: 150,
+              width: 100,
+              color: Colors.amber,
             );
           }),
     );
